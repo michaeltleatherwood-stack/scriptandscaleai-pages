@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - ScriptAndScale AI</title>
+  <meta name="description" content="Get in touch with ScriptAndScale AI for questions, support, or inquiries."/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #667eea; min-height: 100vh; }
+    .container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
+    header { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid #667eea; }
+    nav { display: flex; justify-content: center; gap: 2.5rem; padding: 1rem 0; }
+    nav a { color: #667eea; text-decoration: none; font-weight: 600; transition: 0.3s; }
+    nav a:hover { color: #764ba2; }
+    main { margin-top: 100px; padding: 4rem 0; text-align: center; }
+    h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 1rem; color: #764ba2; }
+    .contact-form { background: rgba(102,126,234,0.05); border-radius: 20px; padding: 3rem; margin-top: 3rem; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 1rem; border: 1px solid #667eea; border-radius: 12px; background: #fff; color: #0f0f23; font-size: 1rem; margin-bottom: 1.2rem; }
+    .contact-form textarea { height: 200px; }
+    .submit-btn { background: linear-gradient(135deg, #667eea, #764ba2); color: #fff; padding: 1.2rem 3rem; border: none; border-radius: 12px; font-size: 1.4rem; cursor: pointer; }
+    .submit-btn:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(102,126,234,0.3); }
+    #successMsg { display: none; margin-top: 2rem; font-size: 1.5rem; color: #4ade80; }
+    footer { padding: 3rem 0; text-align: center; color: #aaa; border-top: 1px solid rgba(102,126,234,0.1); }
+    footer a { color: #aaa; margin: 0 1rem; text-decoration: none; font-size: 0.9rem; }
+    footer a:hover { color: #667eea; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#agents">Agents</a>
+      <a href="index.html#bundles">Bundles</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Contact Us</h1>
+    <p style="font-size:1.3rem;max-width:700px;margin:2rem auto;color:#4a5568;">
+      Have questions about our AI agents, need support, or want to discuss custom solutions? We're here to help.
+    </p>
+    <div class="contact-form">
+      <form id="contactForm" action="https://script.google.com/macros/s/AKfycbz-PGTyn04o2N2iGdbdAqdARVobgmp-GbwXtvU_dUJRk9WwrymN1OAtn-nWJ7xDaYc/exec" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="subject" placeholder="Subject" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="submit-btn">Send Message</button>
+      </form>
+      <p id="successMsg">Thank you! Your message has been sent. We'll get back to you soon.</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 ScriptAndScale AI</p>
+    <p>
+      <a href="contact.html">Contact</a> • 
+      <a href="privacy.html">Privacy Policy</a> • 
+      <a href="terms.html">Terms of Service</a> • 
+      <a href="disclaimer.html">Disclaimer</a>
+    </p>
+  </footer>
+
+  <!-- Live Chat Bot Embed -->
+  <script>
+    // Replace with your actual chat bot embed script if different
+    (function() {
+      var script = document.createElement('script');
+      script.src = 'YOUR_CHAT_BOT_EMBED_SCRIPT_URL'; // If hosted, put the URL here
+      script.async = true;
+      document.body.appendChild(script);
+    })();
+  </script>
+</body>
+</html>
