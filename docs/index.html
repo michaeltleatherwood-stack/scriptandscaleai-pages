@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PT796GHL');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScriptAndScale AI - Premium AI Automation Agents</title>
+  <meta name="description" content="ScriptAndScale AI is a multi-agent automation platform featuring premium lifetime-owned AI agents for social media, content creation, video automation, engagement, and custom workflows. One-time payment with full resale rights."/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Inter', sans-serif; 
+      background: #ffffff; 
+      color: #0f172a; 
+      min-height: 100vh; 
+      line-height: 1.6;
+    }
+    .container { max-width: 1400px; margin: 0 auto; padding: 0 1.5rem; }
+
+    /* Banner - scrolls with page (like X header) */
+    .banner {
+      position: relative;
+      height: 380px;
+      background-image: url('https://michaeltleatherwood-stack.github.io/scriptandscaleai/site/x-banner.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+    }
+
+    /* Avatar overlapping the banner (bottom part) */
+    .avatar-wrapper {
+      position: absolute;
+      bottom: -70px;
+      left: 5%;
+      z-index: 10;
+    }
+
+    .logo-avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid white;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.45);
+    }
+
+    .logo-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Sticky navigation bar */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.75);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      padding: 1rem 2.5rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      display: flex;
+      gap: 3rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.15rem;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.9);
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      color: #e0f2fe;
+      transform: translateY(-2px);
+    }
+
+    /* Hero - now normal section below banner/nav */
+    .hero {
+      text-align: center;
+      padding: 120px 1rem 100px;
+      background: white;
+      color: #0f172a;
+    }
+
+    .hero h1 {
+      font-size: 4.2rem;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+      color: #1d4ed8;
+    }
+
+    .hero p {
+      font-size: 1.6rem;
+      max-width: 900px;
+      margin: 0 auto;
+      color: #334155;
+    }
+
+    /* Main content sections */
+    section {
+      padding: 100px 0;
+      background: white;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 3.2rem;
+      font-weight: 800;
+      margin-bottom: 3.5rem;
+      color: #1e40af;
+    }
+
+    .agents-grid, .bundles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: all 0.25s ease;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(30,58,138,0.12);
+      border-color: #bfdbfe;
+    }
+
+    .card h3 {
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+      color: #1e40af;
+      font-weight: 700;
+    }
+
+    .card p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #475569;
+    }
+
+    .price {
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin: 1.5rem 0;
+      color: #1d4ed8;
+    }
+
+    .coming-soon {
+      font-size: 1.3rem;
+      color: #64748b;
+      font-style: italic;
+      margin: 1rem 0;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      margin: 1.8rem 0;
+    }
+
+    .btn-more {
+      background: transparent;
+      color: #1d4ed8;
+      border: 2px solid #1d4ed8;
+      padding: 0.85rem 2.2rem;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-more:hover {
+      background: #1d4ed8;
+      color: white;
+    }
+
+    .btn-buy {
+      background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+      color: white;
+      padding: 0.85rem 2.2rem;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+
+    .btn-buy:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(29,78,216,0.25);
+    }
+
+    .social-logos {
+      margin-top: 1.8rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .social-logos img {
+      width: 36px;
+      height: 36px;
+      opacity: 0.8;
+      transition: all 0.25s ease;
+    }
+
+    .social-logos img:hover {
+      opacity: 1;
+      transform: scale(1.15);
+    }
+
+    footer {
+      padding: 5rem 0 3rem;
+      text-align: center;
+      color: #64748b;
+      background: #f8fafc;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    footer a {
+      color: #475569;
+      margin: 0 1.2rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer a:hover {
+      color: #1d4ed8;
+    }
+
+    @media (max-width: 1024px) {
+      .banner { height: 300px; }
+      .avatar-wrapper { left: 3%; bottom: -60px; }
+      .logo-avatar { width: 120px; height: 120px; }
+      .sticky-nav { padding: 1rem 1.5rem; }
+      nav { gap: 2rem; }
+    }
+
+    @media (max-width: 768px) {
+      .banner { height: 260px; }
+      .avatar-wrapper { 
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin: -70px auto 40px;
+        text-align: center;
+      }
+      .sticky-nav {
+        justify-content: center;
+        padding: 1rem;
+      }
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1.2rem;
+      }
+      nav a {
+        font-size: 1rem;
+      }
+      .logo-avatar { width: 110px; height: 110px; }
+      .hero h1 { font-size: 3.4rem; }
+      .hero p { font-size: 1.45rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT796GHL"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header class="banner">
+    <div class="avatar-wrapper">
+      <div class="logo-avatar">
+        <img src="https://michaeltleatherwood-stack.github.io/scriptandscaleai/site/logo.png" alt="ScriptAndScale AI">
+      </div>
+    </div>
+  </header>
+
+  <nav class="sticky-nav">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#agents">Agents</a>
+      <a href="#bundles">Bundles</a>
+    </nav>
+  </nav>
+
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>ScriptAndScale AI</h1>
+      <p>Premium AI automation agents for social media. Lifetime ownership. Full resale rights. One-time payment.</p>
+    </div>
+  </section>
+
+  <section class="container" id="agents">
+    <h2>Our AI Agents</h2>
+    <div class="agents-grid">
+      <div class="card">
+        <h3>Social Content Generator</h3>
+        <p>Daily fresh, on-brand posts automated across platforms.</p>
+        <p class="price">$9,997</p>
+        <div class="buttons">
+          <button class="btn-more" onclick="location.href='social-content-generator.html'">Learn More</button>
+          <button class="btn-buy" onclick="location.href='purchase.html?agent=social-content'">Buy Now</button>
+        </div>
+        <div class="social-logos">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/x.svg" alt="X">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/facebook.svg" alt="Facebook">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/instagram.svg" alt="Instagram">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/youtube.svg" alt="YouTube">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/tiktok.svg" alt="TikTok">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linkedin.svg" alt="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/reddit.svg" alt="Reddit">
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Reply Bot</h3>
+        <p>Intelligent automated replies and engagement.</p>
+        <p class="price">$4,997</p>
+        <p class="coming-soon">Coming Soon</p>
+        <div class="buttons">
+          <button class="btn-more" onclick="location.href='reply-bot.html'">Learn More</button>
+        </div>
+        <div class="social-logos">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/x.svg" alt="X">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/facebook.svg" alt="Facebook">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/instagram.svg" alt="Instagram">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linkedin.svg" alt="LinkedIn">
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Promotion Bot</h3>
+        <p>Accounts must be warmed up before automation. No posting during probation.</p>
+        <p class="price">$4,997</p>
+        <p class="coming-soon">Coming Soon</p>
+        <div class="buttons">
+          <button class="btn-more" onclick="location.href='promotion-bot.html'">Learn More</button>
+        </div>
+        <div class="social-logos">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/x.svg" alt="X">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/facebook.svg" alt="Facebook">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/instagram.svg" alt="Instagram">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linkedin.svg" alt="LinkedIn">
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Custom Agent Builder</h3>
+        <p>Create fully custom automation agents.</p>
+        <p class="price">$4,997</p>
+        <p class="coming-soon">Coming Soon</p>
+        <div class="buttons">
+          <button class="btn-more" onclick="location.href='custom-agent-builder.html'">Learn More</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Channel Optimization Agent</h3>
+        <p>Requires warmed and trusted accounts before automation.<br>Customer provides preferences and goals.<br>ScriptAndScale AI performs the configuration and tuning.<br>Not customer-configurable.</p>
+        <p class="price">$4,997</p>
+        <p class="coming-soon">Coming Soon</p>
+        <div class="buttons">
+          <button class="btn-more" onclick="location.href='channel-optimization-agent.html'">Learn More</button>
+        </div>
+        <div class="social-logos">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/x.svg" alt="X">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/youtube.svg" alt="YouTube">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/tiktok.svg" alt="TikTok">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/instagram.svg" alt="Instagram">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/facebook.svg" alt="Facebook">
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Video Content Automation Agent</h3>
+        <p>Automated video content creation.</p>
+        <p class="price">$14,997</p>
+        <p class="coming-soon">Coming Soon</p>
+        <div class="buttons">
+          <button class="btn-more" onclick="location.href='video-content-automation-agent.html'">Learn More</button>
+        </div>
+        <div class="social-logos">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/youtube.svg" alt="YouTube">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/tiktok.svg" alt="TikTok">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/vimeo.svg" alt="Vimeo">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/rumble.svg" alt="Rumble">
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Supercuts Agent</h3>
+        <p>Automated supercut video creation.</p>
+        <p class="price">$7,997</p>
+        <p class="coming-soon">Coming Soon</p>
+        <div class="buttons">
+          <button class="btn-more" onclick="location.href='supercuts-agent.html'">Learn More</button>
+        </div>
+        <div class="social-logos">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/youtube.svg" alt="YouTube">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/tiktok.svg" alt="TikTok">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/vimeo.svg" alt="Vimeo">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/rumble.svg" alt="Rumble">
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Chat Bot</h3>
+        <p>Live site and platform chat automation.</p>
+        <p class="price">$2,997</p>
+        <div class="buttons">
+          <button class="btn-more" onclick="location.href='chat-bot.html'">Learn More</button>
+          <button class="btn-buy" onclick="location.href='purchase.html?agent=chat-bot'">Buy Now</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>Written Content Agent</h3>
+        <p>Automated written content generation.</p>
+        <p class="price">$9,997</p>
+        <p class="coming-soon">Coming Soon</p>
+        <div class="buttons">
+          <button class="btn-more" onclick="location.href='written-content-agent.html'">Learn More</button>
+        </div>
+        <div class="social-logos">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linkedin.svg" alt="LinkedIn">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/reddit.svg" alt="Reddit">
+          <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/facebook.svg" alt="Facebook">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container" id="bundles">
+    <h2>Our Bundles</h2>
+    <div class="bundles-grid">
+      <div class="card">
+        <h3>Content Creator Bundle</h3>
+        <p>Includes: Social Content Generator, Reply Bot, Promotion Bot, Chat Bot</p>
+        <p class="price">$19,997</p>
+        <p class="coming-soon">Coming Soon</p>
+        <div class="buttons"></div>
+      </div>
+      <div class="card">
+        <h3>Video Creator Bundle</h3>
+        <p>Includes: Video Content Automation, Supercuts Agent, Promotion Bot, Chat Bot</p>
+        <p class="price">$24,997</p>
+        <p class="coming-soon">Coming Soon</p>
+        <div class="buttons"></div>
+      </div>
+      <div class="card">
+        <h3>Engagement Boost Add-On</h3>
+        <p>Includes: Reply Bot, Chat Bot</p>
+        <p class="price">$6,997</p>
+        <p class="coming-soon">Coming Soon</p>
+        <div class="buttons"></div>
+      </div>
+      <div class="card">
+        <h3>Flagship Everything Bundle</h3>
+        <p>All current + future agents. Lifetime.</p>
+        <p class="price">$44,997</p>
+        <p class="coming-soon">Coming Soon</p>
+        <div class="buttons"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 ScriptAndScale AI</p>
+    <p>
+      <a href="contact.html">Contact</a> •
+      <a href="privacy.html">Privacy Policy</a> •
+      <a href="terms.html">Terms of Service</a> •
+      <a href="disclaimer.html">Disclaimer</a>
+    </p>
+    <div class="social-logos" style="margin-top:2rem;">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/x.svg" alt="X">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/facebook.svg" alt="Facebook">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/instagram.svg" alt="Instagram">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/youtube.svg" alt="YouTube">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/tiktok.svg" alt="TikTok">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/linkedin.svg" alt="LinkedIn">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/reddit.svg" alt="Reddit">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/vimeo.svg" alt="Vimeo">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/rumble.svg" alt="Rumble">
+    </div>
+  </footer>
+
+  <script>
+  (function() {
+      const ENDPOINT = "https://script.google.com/macros/s/AKfycbwN0CE-P7hvMCUIQ9epE7tepTGnVWwPNtsU3L72edPs3oTmlxkyNJ5vk6Uff8uOiBPa/exec";
+      const BRAND_COLOR = "#1d4ed8";
+      const BRAND_COLOR_DARK = "#1e40af";
+      const container = document.createElement('div');
+      container.id = 'ssai-chat-container';
+      document.body.appendChild(container);
+      const style = document.createElement('style');
+      style.textContent = `
+          #ssai-chat-container {
+              position: fixed;
+              bottom: 24px;
+              right: 24px;
+              z-index: 9999;
+              font-family: 'Inter', system-ui, -apple-system, sans-serif;
+          }
+          #ssai-chat-launcher {
+              width: 64px;
+              height: 64px;
+              background: ${BRAND_COLOR};
+              border-radius: 50%;
+              box-shadow: 0 6px 20px rgba(29,78,216,0.35);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: all 0.25s ease;
+          }
+          #ssai-chat-launcher:hover {
+              transform: scale(1.08);
+              background: ${BRAND_COLOR_DARK};
+          }
+          #ssai-chat-launcher i {
+              color: white;
+              font-size: 28px;
+          }
+          #ssai-chat-window {
+              position: absolute;
+              bottom: 80px;
+              right: 0;
+              width: 360px;
+              height: 520px;
+              background: white;
+              border-radius: 16px;
+              box-shadow: 0 20px 60px rgba(0,0,0,0.18);
+              overflow: hidden;
+              display: none;
+              flex-direction: column;
+              border: 1px solid #e2e8f0;
+          }
+          #ssai-chat-header {
+              background: linear-gradient(135deg, ${BRAND_COLOR}, ${BRAND_COLOR_DARK});
+              color: white;
+              padding: 14px 18px;
+              font-weight: 600;
+              font-size: 16px;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+          }
+          #ssai-chat-close {
+              background: none;
+              border: none;
+              color: white;
+              font-size: 22px;
+              cursor: pointer;
+          }
+          #ssai-chat-messages {
+              flex: 1;
+              padding: 16px;
+              overflow-y: auto;
+              background: #f8fafc;
+          }
+          .ssai-message {
+              margin-bottom: 14px;
+              max-width: 82%;
+              padding: 12px 16px;
+              border-radius: 18px;
+              line-height: 1.4;
+              font-size: 15px;
+          }
+          .ssai-user {
+              background: ${BRAND_COLOR};
+              color: white;
+              margin-left: auto;
+              border-bottom-right-radius: 4px;
+          }
+          .ssai-bot {
+              background: white;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+              border: 1px solid #e2e8f0;
+              border-bottom-left-radius: 4px;
+          }
+          #ssai-chat-input-area {
+              padding: 12px 16px;
+              background: white;
+              border-top: 1px solid #e2e8f0;
+              display: flex;
+              gap: 10px;
+          }
+          #ssai-chat-input {
+              flex: 1;
+              padding: 10px 16px;
+              border: 1px solid #cbd5e1;
+              border-radius: 12px;
+              font-size: 15px;
+              outline: none;
+          }
+          #ssai-chat-input:focus {
+              border-color: ${BRAND_COLOR};
+              box-shadow: 0 0 0 3px rgba(29,78,216,0.15);
+          }
+          #ssai-chat-send {
+              background: ${BRAND_COLOR};
+              color: white;
+              border: none;
+              border-radius: 12px;
+              width: 48px;
+              height: 48px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              cursor: pointer;
+              transition: background 0.2s;
+          }
+          #ssai-chat-send:hover { background: ${BRAND_COLOR_DARK}; }
+          #ssai-chat-send:disabled {
+              background: #9ca3af;
+              cursor: not-allowed;
+          }
+      `;
+      document.head.appendChild(style);
+      container.innerHTML = `
+          <div id="ssai-chat-launcher">
+              <i class="fas fa-comment-dots"></i>
+          </div>
+          <div id="ssai-chat-window">
+              <div id="ssai-chat-header">
+                  <span>ScriptAndScale AI</span>
+                  <button id="ssai-chat-close">×</button>
+              </div>
+              <div id="ssai-chat-messages"></div>
+              <div id="ssai-chat-input-area">
+                  <input type="text" id="ssai-chat-input" placeholder="Ask anything about our AI agents..." autocomplete="off"/>
+                  <button id="ssai-chat-send">➤</button>
+              </div>
+          </div>
+      `;
+      const launcher = document.getElementById('ssai-chat-launcher');
+      const windowEl = document.getElementById('ssai-chat-window');
+      const closeBtn = document.getElementById('ssai-chat-close');
+      const messages = document.getElementById('ssai-chat-messages');
+      const input = document.getElementById('ssai-chat-input');
+      const sendBtn = document.getElementById('ssai-chat-send');
+      let sessionId = localStorage.getItem('ssai_chat_session_id');
+      if (!sessionId) {
+          sessionId = 'ssai_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+          localStorage.setItem('ssai_chat_session_id', sessionId);
+      }
+      function addMessage(text, isUser = false) {
+          const msg = document.createElement('div');
+          msg.className = `ssai-message ${isUser ? 'ssai-user' : 'ssai-bot'}`;
+          msg.textContent = text;
+          messages.appendChild(msg);
+          messages.scrollTop = messages.scrollHeight;
+      }
+      function showTyping() {
+          const typing = document.createElement('div');
+          typing.className = 'ssai-typing';
+          typing.innerHTML = `
+              <div class="ssai-dot"></div>
+              <div class="ssai-dot"></div>
+              <div class="ssai-dot"></div>
+          `;
+          typing.id = 'ssai-typing-indicator';
+          messages.appendChild(typing);
+          messages.scrollTop = messages.scrollHeight;
+          return typing;
+      }
+      function removeTyping() {
+          const typing = document.getElementById('ssai-typing-indicator');
+          if (typing) typing.remove();
+      }
+      async function sendMessage() {
+          const text = input.value.trim();
+          if (!text) return;
+          addMessage(text, true);
+          input.value = '';
+          sendBtn.disabled = true;
+          input.disabled = true;
+          const typing = showTyping();
+          try {
+              const response = await fetch(ENDPOINT, {
+                  method: 'POST',
+                  mode: 'cors',
+                  headers: {
+                      'Content-Type': 'text/plain;charset=utf-8'
+                  },
+                  body: JSON.stringify({
+                      message: text,
+                      sessionId: sessionId
+                  })
+              });
+              if (!response.ok) throw new Error(`Server responded ${response.status}`);
+              const data = await response.json();
+              removeTyping();
+              if (data && data.response) {
+                  addMessage(data.response);
+              } else {
+                  addMessage("Sorry, I couldn't get a proper response. Please try again.");
+              }
+          } catch (err) {
+              removeTyping();
+              addMessage("Sorry, something went wrong. Please try again in a moment.");
+              console.error('Chat error:', err);
+          } finally {
+              sendBtn.disabled = false;
+              input.disabled = false;
+              input.focus();
+          }
+      }
+      launcher.addEventListener('click', () => {
+          windowEl.style.display = windowEl.style.display === 'flex' ? 'none' : 'flex';
+          if (windowEl.style.display === 'flex') {
+              input.focus();
+          }
+      });
+      closeBtn.addEventListener('click', () => {
+          windowEl.style.display = 'none';
+      });
+      sendBtn.addEventListener('click', sendMessage);
+      input.addEventListener('keypress', (e) => {
+          if (e.key === 'Enter' && !e.shiftKey) {
+              e.preventDefault();
+              sendMessage();
+          }
+      });
+  })();
+  </script>
+</body>
+</html>
