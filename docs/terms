@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service - ScriptAndScale AI</title>
+  <meta name="description" content="Terms of Service for ScriptAndScale AI."/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #667eea; min-height: 100vh; line-height: 1.6; }
+    .container { max-width: 800px; margin: 0 auto; padding: 2rem 1rem; }
+    header { position: fixed; top: 0; width: 100%; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); z-index: 100; border-bottom: 1px solid #667eea; }
+    nav { display: flex; justify-content: center; gap: 2.5rem; padding: 1rem 0; }
+    nav a { color: #667eea; text-decoration: none; font-weight: 600; transition: 0.3s; }
+    nav a:hover { color: #764ba2; }
+    main { margin-top: 100px; padding: 4rem 0; }
+    h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 2rem; color: #764ba2; text-align: center; }
+    h2 { font-size: 2rem; font-weight: 700; margin: 2rem 0 1rem; color: #764ba2; }
+    p { font-size: 1.1rem; margin-bottom: 1.5rem; color: #4a5568; }
+    ul { margin-left: 2rem; margin-bottom: 1.5rem; }
+    li { font-size: 1.1rem; margin-bottom: 0.5rem; color: #4a5568; }
+    footer { padding: 3rem 0; text-align: center; color: #aaa; border-top: 1px solid rgba(102,126,234,0.1); }
+    footer a { color: #aaa; margin: 0 1rem; text-decoration: none; font-size: 0.9rem; }
+    footer a:hover { color: #667eea; }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="index.html#agents">Agents</a>
+      <a href="index.html#bundles">Bundles</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Terms of Service</h1>
+    <p>Last updated: January 07, 2026</p>
+    
+    <p>By accessing or using ScriptAndScale AI ("we", "our", or "us") website and purchasing our products, you agree to be bound by these Terms of Service.</p>
+    
+    <h2>1. Products and Services</h2>
+    <p>We provide AI automation agents via Google Apps Script. Products are delivered as code with lifetime ownership and full resale rights for the purchaser.</p>
+    
+    <h2>2. Purchase and Payment</h2>
+    <p>All sales are final. No refunds or money-back guarantees. Payments are processed through PayPal. You are responsible for providing accurate information for delivery.</p>
+    
+    <h2>3. Delivery</h2>
+    <p>Most agents are delivered automatically within 1 business day. Complex custom requests may take 2-3 business days for review. You will receive the full code package via email.</p>
+    
+    <h2>4. License and Usage</h2>
+    <p>You receive lifetime ownership of the purchased agent code. You may use, modify, and resell the agents. No priority support or custom installation included. Light email support provided.</p>
+    
+    <h2>5. Intellectual Property</h2>
+    <p>The agent code is licensed to you for personal and commercial use. Core algorithms remain property of ScriptAndScale AI.</p>
+    
+    <h2>6. Limitation of Liability</h2>
+    <p>Agents are provided "as is". We are not liable for any damages, losses, or platform bans resulting from use. You are responsible for compliance with platform terms (e.g., X/Twitter, YouTube).</p>
+    
+    <h2>7. Changes to Terms</h2>
+    <p>We may update these terms at any time. Continued use constitutes acceptance.</p>
+    
+    <h2>8. Contact</h2>
+    <p>For questions, contact michaeltleatherwood@gmail.com.</p>
+  </main>
+
+  <footer>
+    <p>© 2026 ScriptAndScale AI</p>
+    <p>
+      <a href="contact.html">Contact</a> • 
+      <a href="privacy.html">Privacy Policy</a> • 
+      <a href="terms.html">Terms of Service</a> • 
+      <a href="disclaimer.html">Disclaimer</a>
+    </p>
+  </footer>
+
+  <!-- Live Chat Bot Embed -->
+  <script>
+    // Replace with your actual chat bot embed script if different
+    (function() {
+      var script = document.createElement('script');
+      script.src = 'YOUR_CHAT_BOT_EMBED_SCRIPT_URL'; // If hosted, put the URL here
+      script.async = true;
+      document.body.appendChild(script);
+    })();
+  </script>
+</body>
+</html>
