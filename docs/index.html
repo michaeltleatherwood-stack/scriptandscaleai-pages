@@ -24,7 +24,7 @@
     }
     .profile-header {
       position: relative;
-      height: 440px;           /* increased to give avatar more room above nav */
+      height: 480px;
       width: 100%;
       background-image: url('x-banner.png');
       background-size: cover;
@@ -33,7 +33,7 @@
     }
     .avatar-container {
       position: absolute;
-      bottom: 20px;            /* raised higher — now clearly above white bar on all screens */
+      bottom: 60px;
       left: 5%;
       z-index: 10;
     }
@@ -248,8 +248,8 @@
       color: #1d4ed8;
     }
     @media (max-width: 1024px) {
-      .profile-header { height: 380px; }
-      .avatar-container { left: 4%; bottom: 20px; }
+      .profile-header { height: 420px; }
+      .avatar-container { left: 4%; bottom: 60px; }
       .avatar { width: 136px; height: 136px; border-width: 5px; }
       .hero h1 { font-size: 4rem; }
     }
@@ -263,15 +263,15 @@
       .nav-bar {
         justify-content: flex-end;
       }
-      .profile-header { height: 340px; background-position: center 40%; }
-      .avatar-container { 
-        left: 50% !important; 
-        transform: translateX(-50%); 
-        bottom: 20px;            /* raised higher on mobile too */
+      .profile-header { height: 380px; background-position: center 40%; }
+      .avatar-container {
+        left: 50% !important;
+        transform: translateX(-50%);
+        bottom: 50px;
       }
       .avatar { width: 120px; height: 120px; border-width: 4px; }
       .hero {
-        padding: 120px 1rem 80px;
+        padding: 140px 1rem 80px;
         text-align: center !important;
       }
       .hero h1 {
