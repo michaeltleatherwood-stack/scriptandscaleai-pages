@@ -24,7 +24,7 @@
     }
     .profile-header {
       position: relative;
-      height: 420px;           /* increased slightly for better spacing */
+      height: 410px; /* only change here — slight increase so avatar sits fully above nav */
       width: 100%;
       background-image: url('x-banner.png');
       background-size: cover;
@@ -33,7 +33,7 @@
     }
     .avatar-container {
       position: absolute;
-      bottom: -20px;           /* moved up significantly so it's fully above the nav bar */
+      bottom: -8px; /* only change here — moved up so white bar can't cut through avatar */
       left: 5%;
       z-index: 10;
     }
@@ -247,15 +247,12 @@
     footer a:hover {
       color: #1d4ed8;
     }
-
-    /* Mobile adjustments */
     @media (max-width: 1024px) {
-      .profile-header { height: 360px; }
-      .avatar-container { left: 4%; bottom: -12px; }
+      .profile-header { height: 350px; }
+      .avatar-container { left: 4%; bottom: 0px; }
       .avatar { width: 136px; height: 136px; border-width: 5px; }
       .hero h1 { font-size: 4rem; }
     }
-
     @media (max-width: 899px) {
       .desktop-nav {
         display: none;
@@ -266,32 +263,21 @@
       .nav-bar {
         justify-content: flex-end;
       }
-      .profile-header { 
-        height: 320px; 
-        background-position: center 40%; 
-      }
-      .avatar-container { 
-        left: 50%; 
-        transform: translateX(-50%);  /* center avatar on mobile */
-        bottom: -4px; 
-      }
-      .avatar { 
-        width: 120px; 
-        height: 120px; 
-        border-width: 4px; 
-      }
+      .profile-header { height: 300px; background-position: center 40%; }
+      .avatar-container { left: 5%; bottom: 0px; }
+      .avatar { width: 120px; height: 120px; border-width: 4px; }
       .hero {
-        padding: 100px 1rem 80px;  /* reduced top padding since avatar is higher */
+        padding: 110px 1rem 80px;
         text-align: center !important;
       }
       .hero h1 {
         font-size: 3.4rem;
-        margin: 0 auto;
-        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
       }
       .hero p {
-        margin: 0 auto;
-        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
       }
     }
   </style>
