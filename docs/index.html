@@ -22,7 +22,7 @@
       color: #0f172a;
       line-height: 1.6;
     }
-    /* Banner - X/Twitter style - scrolls away */
+
     .profile-header {
       position: relative;
       height: 380px;
@@ -32,12 +32,14 @@
       background-position: center 35%;
       background-repeat: no-repeat;
     }
+
     .avatar-container {
       position: absolute;
       bottom: -76px;
       left: 5%;
       z-index: 10;
     }
+
     .avatar {
       width: 152px;
       height: 152px;
@@ -47,12 +49,13 @@
       box-shadow: 0 4px 16px rgba(0,0,0,0.25);
       background: #ffffff;
     }
+
     .avatar img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
-    /* Navigation */
+
     .nav-bar {
       position: sticky;
       top: 0;
@@ -64,10 +67,12 @@
       justify-content: flex-end;
       align-items: center;
     }
+
     nav {
       display: flex;
       gap: 3.2rem;
     }
+
     nav a {
       color: #0f172a;
       text-decoration: none;
@@ -75,19 +80,22 @@
       font-size: 1.1rem;
       transition: color 0.2s ease;
     }
+
     nav a:hover {
       color: #1d4ed8;
     }
-    /* Main content */
+
     .container {
       max-width: 1400px;
       margin: 0 auto;
       padding: 0 5%;
     }
+
     .hero {
       text-align: center;
       padding: 140px 1rem 100px;
     }
+
     .hero h1 {
       font-size: 4.6rem;
       font-weight: 800;
@@ -95,6 +103,7 @@
       color: #0f172a;
       letter-spacing: -1px;
     }
+
     .hero p {
       font-size: 1.65rem;
       max-width: 920px;
@@ -102,9 +111,11 @@
       color: #334155;
       font-weight: 400;
     }
+
     section {
       padding: 100px 0;
     }
+
     h2 {
       text-align: center;
       font-size: 3.4rem;
@@ -112,11 +123,13 @@
       margin-bottom: 3.5rem;
       color: #0f172a;
     }
+
     .agents-grid, .bundles-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
       gap: 2.5rem;
     }
+
     .card {
       background: #ffffff;
       border-radius: 16px;
@@ -126,34 +139,40 @@
       transition: all 0.28s ease;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
     }
+
     .card:hover {
       transform: translateY(-8px);
       box-shadow: 0 16px 40px rgba(0,0,0,0.08);
       border-color: #cbd5e1;
     }
+
     .card h3 {
       font-size: 1.95rem;
       margin-bottom: 1.1rem;
       color: #0f172a;
       font-weight: 700;
     }
+
     .card p {
       font-size: 1.1rem;
       margin-bottom: 1.4rem;
       color: #475569;
     }
+
     .price {
       font-size: 2.4rem;
       font-weight: 800;
       margin: 1.6rem 0;
       color: #1d4ed8;
     }
+
     .coming-soon {
       font-size: 1.3rem;
       color: #64748b;
       font-style: italic;
       margin: 1rem 0;
     }
+
     .buttons {
       display: flex;
       justify-content: center;
@@ -161,6 +180,7 @@
       flex-wrap: wrap;
       margin: 1.8rem 0;
     }
+
     .btn-more, .btn-buy {
       padding: 0.9rem 2.3rem;
       border-radius: 12px;
@@ -169,24 +189,29 @@
       cursor: pointer;
       transition: all 0.25s ease;
     }
+
     .btn-more {
       background: transparent;
       color: #1d4ed8;
       border: 2px solid #1d4ed8;
     }
+
     .btn-more:hover {
       background: #1d4ed8;
       color: white;
     }
+
     .btn-buy {
       background: #1d4ed8;
       color: white;
       border: none;
     }
+
     .btn-buy:hover {
       background: #1e40af;
       transform: translateY(-2px);
     }
+
     .social-logos {
       margin-top: 1.8rem;
       display: flex;
@@ -194,14 +219,17 @@
       gap: 1.4rem;
       flex-wrap: wrap;
     }
+
     .social-logos img {
       width: 38px;
       height: 38px;
       transition: all 0.2s ease;
     }
+
     .social-logos img:hover {
       transform: scale(1.18);
     }
+
     footer {
       padding: 6rem 0 4rem;
       text-align: center;
@@ -209,32 +237,42 @@
       background: #f8fafc;
       border-top: 1px solid #e2e8f0;
     }
+
     footer a {
       color: #475569;
       margin: 0 1.4rem;
       text-decoration: none;
       font-weight: 500;
     }
+
     footer a:hover {
       color: #1d4ed8;
     }
+
     @media (max-width: 1024px) {
       .profile-header { height: 320px; }
       .avatar-container { left: 4%; bottom: -68px; }
       .avatar { width: 136px; height: 136px; border-width: 5px; }
       .hero h1 { font-size: 4rem; }
     }
+
     @media (max-width: 768px) {
-      .profile-header { height: 280px; background-position: center 40%; padding-bottom: 80px; }
+      .profile-header {
+        height: 320px;
+        padding-bottom: 100px;
+      }
       .avatar-container {
         position: absolute;
-        bottom: -68px;
+        bottom: -76px;
         left: 50%;
         transform: translateX(-50%);
       }
       .nav-bar {
+        position: relative;
+        top: auto;
+        padding: 1.2rem 5%;
         justify-content: center;
-        padding: 1rem;
+        margin-top: 60px;
       }
       nav {
         flex-wrap: wrap;
@@ -242,7 +280,7 @@
         justify-content: center;
       }
       .hero {
-        padding: 120px 1.5rem 80px;
+        padding-top: 100px;
       }
       .hero h1 { font-size: 3.4rem; }
       .hero p { font-size: 1.4rem; }
@@ -254,6 +292,7 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PT796GHL"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
   <div class="profile-header">
     <div class="avatar-container">
       <div class="avatar">
@@ -261,6 +300,7 @@
       </div>
     </div>
   </div>
+
   <div class="nav-bar">
     <nav>
       <a href="#home">Home</a>
@@ -268,11 +308,13 @@
       <a href="#bundles">Bundles</a>
     </nav>
   </div>
+
   <div class="container">
     <section class="hero" id="home">
       <h1>ScriptAndScale AI</h1>
       <p>Premium AI automation agents for social media. Lifetime ownership. Full resale rights. One-time payment.</p>
     </section>
+
     <section id="agents">
       <h2>Our AI Agents</h2>
       <div class="agents-grid">
@@ -404,6 +446,7 @@
         </div>
       </div>
     </section>
+
     <section id="bundles">
       <h2>Our Bundles</h2>
       <div class="bundles-grid">
@@ -438,6 +481,7 @@
       </div>
     </section>
   </div>
+
   <footer>
     <p>© 2026 ScriptAndScale AI</p>
     <p>
@@ -458,6 +502,7 @@
       <img src="rumble-logo.png" alt="Rumble">
     </div>
   </footer>
+
   <script>
   (function() {
       const ENDPOINT = "https://script.google.com/macros/s/AKfycbwN0CE-P7hvMCUIQ9epE7tepTGnVWwPNtsU3L72edPs3oTmlxkyNJ5vk6Uff8uOiBPa/exec";
