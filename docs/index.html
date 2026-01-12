@@ -115,7 +115,7 @@
     }
     .hero {
       text-align: center;
-      padding: 140px 1rem 100px;
+      padding: 240px 1rem 100px; /* increased top padding to push title much higher on desktop/web */
     }
     .hero h1 {
       font-size: 4.6rem;
@@ -265,8 +265,7 @@
       }
       .profile-header { height: 380px; background-position: center 40%; }
       .avatar-container {
-        left: 50% !important;
-        transform: translateX(-50%);
+        left: 5%;
         bottom: 50px;
       }
       .avatar { width: 120px; height: 120px; border-width: 4px; }
@@ -276,11 +275,15 @@
       }
       .hero h1 {
         font-size: 3.4rem;
-        margin: 0 auto !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
         text-align: center !important;
       }
       .hero p {
-        margin: 0 auto !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
         max-width: 90%;
         text-align: center !important;
       }
