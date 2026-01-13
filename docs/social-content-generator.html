@@ -73,6 +73,7 @@
           <img src="x-logo.png" alt="X (Twitter)">
           <img src="instagram-logo.png" alt="Instagram">
           <img src="tiktok-logo.png" alt="TikTok">
+          <img src="/scriptandscaleai-pages/reddit-color.svg" alt="Reddit">
         </div>
         <ul class="features">
           <li>4 daily posts with built-in variety</li>
@@ -99,17 +100,14 @@
       </p>
     </div>
   </footer>
-
   <script>
   (function() {
       const ENDPOINT = "https://script.google.com/macros/s/AKfycbz-PGTyn04o2N2iGdbdAqdARVobgmp-GbwXtvU_dUJRk9WwrymN1OAtn-nWJ7xDaYc/exec";
       const BRAND_COLOR = "#667eea";
       const BRAND_COLOR_DARK = "#764ba2";
-
       const container = document.createElement('div');
       container.id = 'ssai-chat-container';
       document.body.appendChild(container);
-
       const style = document.createElement('style');
       style.textContent = `
           #ssai-chat-container {
@@ -119,14 +117,12 @@
               z-index: 9999;
               font-family: 'Inter', system-ui, -apple-system, sans-serif;
           }
-
           #ssai-chat-launcher {
               display: flex;
               align-items: center;
               gap: 6px;
               cursor: pointer;
           }
-
           #ssai-main-bubble {
               width: 68px;
               height: 68px;
@@ -141,21 +137,17 @@
               box-shadow: 0 8px 32px rgba(102,126,234,0.45);
               transition: all 0.3s ease;
           }
-
           #ssai-main-bubble:hover {
               transform: scale(1.08);
           }
-
           .ssai-trail-bubble {
               border-radius: 50%;
               background: linear-gradient(135deg, ${BRAND_COLOR}, ${BRAND_COLOR_DARK});
               box-shadow: 0 4px 16px rgba(102,126,234,0.35);
           }
-
           #trail3 { width: 17px; height: 17px; }
           #trail2 { width: 34px; height: 34px; }
           #trail1 { width: 48px; height: 48px; }
-
           #ssai-chat-window {
               position: absolute;
               bottom: calc(68px + 16px);
@@ -170,7 +162,6 @@
               flex-direction: column;
               border: 1px solid rgba(102,126,234,0.15);
           }
-
           #ssai-chat-header {
               background: linear-gradient(135deg, ${BRAND_COLOR}, ${BRAND_COLOR_DARK});
               color: white;
@@ -181,7 +172,6 @@
               justify-content: space-between;
               align-items: center;
           }
-
           #ssai-chat-close {
               background: none;
               border: none;
@@ -190,16 +180,13 @@
               cursor: pointer;
               opacity: 0.9;
           }
-
           #ssai-chat-close:hover { opacity: 1; }
-
           #ssai-chat-messages {
               flex: 1;
               padding: 16px;
               overflow-y: auto;
               background: #f9fafb;
           }
-
           .ssai-message {
               margin-bottom: 14px;
               max-width: 82%;
@@ -208,20 +195,17 @@
               line-height: 1.4;
               font-size: 15px;
           }
-
           .ssai-user {
               background: ${BRAND_COLOR};
               color: white;
               margin-left: auto;
               border-bottom-right-radius: 4px;
           }
-
           .ssai-bot {
               background: white;
               box-shadow: 0 2px 8px rgba(0,0,0,0.08);
               border-bottom-left-radius: 4px;
           }
-
           #ssai-chat-input-area {
               padding: 12px 16px;
               background: white;
@@ -229,7 +213,6 @@
               display: flex;
               gap: 10px;
           }
-
           #ssai-chat-input {
               flex: 1;
               padding: 10px 16px;
@@ -238,12 +221,10 @@
               font-size: 15px;
               outline: none;
           }
-
           #ssai-chat-input:focus {
               border-color: ${BRAND_COLOR};
               box-shadow: 0 0 0 3px rgba(102,126,234,0.15);
           }
-
           #ssai-chat-send {
               background: ${BRAND_COLOR};
               color: white;
@@ -257,22 +238,18 @@
               cursor: pointer;
               transition: background 0.2s;
           }
-
           #ssai-chat-send:hover {
               background: ${BRAND_COLOR_DARK};
           }
-
           #ssai-chat-send:disabled {
               background: #9ca3af;
               cursor: not-allowed;
           }
-
           .ssai-typing {
               display: flex;
               gap: 6px;
               padding: 12px 16px;
           }
-
           .ssai-dot {
               width: 8px;
               height: 8px;
@@ -280,15 +257,12 @@
               border-radius: 50%;
               animation: ssai-bounce 1.4s infinite ease-in-out both;
           }
-
           .ssai-dot:nth-child(1) { animation-delay: -0.32s; }
           .ssai-dot:nth-child(2) { animation-delay: -0.16s; }
-
           @keyframes ssai-bounce {
               0%, 80%, 100% { transform: scale(0); }
               40% { transform: scale(1); }
           }
-
           @media (max-width: 480px) {
               #ssai-chat-window {
                   width: 90vw;
@@ -303,7 +277,6 @@
           }
       `;
       document.head.appendChild(style);
-
       container.innerHTML = `
           <div id="ssai-chat-launcher">
               <div class="ssai-trail-bubble" id="trail3"></div>
@@ -323,20 +296,17 @@
               </div>
           </div>
       `;
-
       const launcher = document.getElementById('ssai-chat-launcher');
       const windowEl = document.getElementById('ssai-chat-window');
       const closeBtn = document.getElementById('ssai-chat-close');
       const messages = document.getElementById('ssai-chat-messages');
       const input = document.getElementById('ssai-chat-input');
       const sendBtn = document.getElementById('ssai-chat-send');
-
       let sessionId = localStorage.getItem('ssai_chat_session_id');
       if (!sessionId) {
           sessionId = 'ssai_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
           localStorage.setItem('ssai_chat_session_id', sessionId);
       }
-
       function addMessage(text, isUser = false) {
           const msg = document.createElement('div');
           msg.className = `ssai-message ${isUser ? 'ssai-user' : 'ssai-bot'}`;
@@ -344,7 +314,6 @@
           messages.appendChild(msg);
           messages.scrollTop = messages.scrollHeight;
       }
-
       function showTyping() {
           const typing = document.createElement('div');
           typing.className = 'ssai-typing';
@@ -358,23 +327,18 @@
           messages.scrollTop = messages.scrollHeight;
           return typing;
       }
-
       function removeTyping() {
           const typing = document.getElementById('ssai-typing-indicator');
           if (typing) typing.remove();
       }
-
       async function sendMessage() {
           const text = input.value.trim();
           if (!text) return;
-
           addMessage(text, true);
           input.value = '';
           sendBtn.disabled = true;
           input.disabled = true;
-
           const typing = showTyping();
-
           try {
               const response = await fetch(ENDPOINT, {
                   method: 'POST',
@@ -388,13 +352,9 @@
                       sessionId: sessionId
                   })
               });
-
               if (!response.ok) throw new Error(`Server responded ${response.status}`);
-
               const data = await response.json();
-
               removeTyping();
-
               if (data && data.response) {
                   addMessage(data.response);
               } else {
@@ -410,20 +370,16 @@
               input.focus();
           }
       }
-
       launcher.addEventListener('click', () => {
           windowEl.style.display = windowEl.style.display === 'flex' ? 'none' : 'flex';
           if (windowEl.style.display === 'flex') {
               input.focus();
           }
       });
-
       closeBtn.addEventListener('click', () => {
           windowEl.style.display = 'none';
       });
-
       sendBtn.addEventListener('click', sendMessage);
-
       input.addEventListener('keypress', (e) => {
           if (e.key === 'Enter' && !e.shiftKey) {
               e.preventDefault();
